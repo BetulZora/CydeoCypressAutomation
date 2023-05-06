@@ -35,8 +35,28 @@ cy.visit('/registration_form'); // this end point will be added to the baseURL d
 cy.get('.nav-link').click();
 
 cy.get('.nav-link').click();
+})
 
+//can add the .skip keyword to skip test
+it.skip('Test 2', () => {
+    expect(false).to.equal(false);
+})
+it('Test3', ()=> {
+    expect(false).not.to.equal(true);
 
 })
+it('Test4', ()=> {
+    expect(5).to.equal(5);
+})
+
+// add .only keyword to test only that test
+/** it.only('Test5', ()=>{
+    expect(true).to.equal('5'==5);
+}) */
+// removing the only keyword so that all tests will run
+it('Test5', ()=>{
+    expect(true).to.equal('5'==5);
+})
+
 
 })
